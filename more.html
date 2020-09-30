@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Detail</title>
+</head>
+<body>
+    <div class="container mt-3">
+        <h1 id="name" class="text-center bolder"></h1>
+        <div id="preload" class="my-2 px-3"></div>
+        <div id="img" class="text-center"></div>
+            <p class="mb-0" id="title" style="font-size: large;">Squad List : </p>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Position</th>
+                            <th scope="col">Nationality</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                    </tbody>
+                </table>
+        </div>
+        <a href="index.html"><button class="btn btn-primary float-right mb-2 ml-2 px-3 rounded-pill">Back</button></a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="more_script.js"></script>
+    <script>
+        let idTeam = window.location.href.slice(window.location.href.indexOf('?') + 1)
+        getTeam(idTeam)
+    </script>
+</body>
+</html>
